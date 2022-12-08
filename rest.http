@@ -1,2 +1,15 @@
 ### check server status
 GET http://localhost:8000
+
+### POST products
+POST http://localhost:8000/api/v1/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "price": 100
+}
+
+### GET products
+GET http://localhost:8000/api/v1/products

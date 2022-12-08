@@ -16,6 +16,13 @@ const PORT = 8000;
 import { dbConnection } from "./src/config/dbConfig.js";
 dbConnection();
 
+import productRouter from "./src/routers/productRouter.js";
+import categoriesRouter from "./src/routers/categoriesRouter.js";
+
+// api endpoint
+app.use("/api/v1/products", productRouter);
+app.use("/api/v1/categories", categoriesRouter);
+
 // routes
 app.get("/", (req, res) => {
   res.json({
